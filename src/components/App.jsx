@@ -52,7 +52,13 @@ class App extends Component {
   //!!<>
 
   //!!<>
+
   //!!< МЕТОД СОХРАНЕНИЯ в localStorage >
+
+  componentDidMount() {
+    console.log('App componentDidMount');
+  }
+
   componentDidUpdate(prevProps, prevState) {
     console.log('App componentDidUpdate');
     if (this.state.contacts !== prevState.contacts) {
@@ -65,6 +71,7 @@ class App extends Component {
     }
   }
   //!!<>
+
   render() {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
